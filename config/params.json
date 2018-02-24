@@ -1,0 +1,10 @@
+{
+  "dev": {
+    "track":  "T3chFest",
+    "uri":  "http://localhost:3000/api/social"
+  },
+  "pro": {
+    "track":  "T3chFest",
+    "uri":  "http://localhost:3000/api/social"
+  }
+}

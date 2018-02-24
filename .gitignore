@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# prevent creds
+config/creds.json
+
+

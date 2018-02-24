@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
-    "start": "node main_stream.js"
+    "start": "NODE_ENV=pro node main_stream.js",    
+    "start-dev": "node main_stream.js"
   },
   "author": "",
   "license": "ISC",
