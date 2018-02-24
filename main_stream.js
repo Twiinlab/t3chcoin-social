@@ -1,4 +1,26 @@
-var Twit = require('twit')
+const Twit = require('twit')
+const request = require('request-promise');
+
+// const options = {  
+//   method: 'POST',
+//   url: 'http://192.168.1.135:3000/api/social',
+//   headers: {
+//     'Accept': 'application/json',
+//     'Accept-Charset': 'utf-8',
+//   },
+//   body : {"socialId":"133729814","message":"message","messageTypeIndex":0},
+//   json: true 
+// };
+
+// request(options)
+//   .then(function (response) {
+//     console.log(response.url);
+//     console.log(response.explanation);
+//   })
+//   .catch(function (err) {
+//     console.log(err);
+//   })
+
 
 var T = new Twit({
   consumer_key: 'u9b59kVCyHNCQKobJmEew0nbI'
@@ -14,7 +36,9 @@ var streamTrack = T.stream('statuses/filter', {
 })
 
 streamTrack.on('tweet', t => {
-  console.log(`${t.text}\n`)
+
+  console.log(`Text: ${t.text}\n`)
+  console.log(`User: ${t.user}\n`)
 
   // Follow ////
   T.post('friendships/create', {
@@ -50,38 +74,3 @@ streamTrack.on('tweet', t => {
     }
   })
 })
-
-
-
-// // USER  ////////////////////////////////////////
-
-// var streamUser = T.stream('user');
-
-// streamUser.on('follow', followed);
-
-// function followed(eventMsg) {
-//   console.log('Follow event');
-//   var name = eventMsg.source.name;
-//   var screenName = eventMsg.source.screen_name;
-//   tweetMessage('@' + screenName + "Thank you for following me!")
-// }
-
-// function tweetMessage(txt) {
-
-//   var tweet = {
-//     status: txt
-//   }
-
-//   T.post('statuses/update', tweet, tweeted)
-
-//   function tweeted(err, data, response) {
-//     if (err) {
-//       console.log("Something went wrong!");
-//     }
-//     else {
-//       console.log("Voila It worked!");
-//     }
-//   }
-// }
-
-
