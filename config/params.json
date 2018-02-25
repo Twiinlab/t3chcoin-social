@@ -5,6 +5,6 @@
   },
   "pro": {
     "track":  "T3chFest",
-    "uri":  "http://localhost:3000/api/social"
+    "uri":  "https://t3chcoinfest.appspot.com/api/social"
   }
 }

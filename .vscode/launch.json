@@ -7,7 +7,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch main_stream",
+            "name": "Launch Program",
             "program": "${workspaceFolder}/main_stream.js"
         }
     ]

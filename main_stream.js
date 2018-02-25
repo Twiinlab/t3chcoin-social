@@ -2,6 +2,7 @@ const Twit = require('twit')
 const request = require('request-promise');
 const { creds, params } = require('./config');
 
+console.log(params);
 const options = {  
   method: 'POST',
   url:  params.uri,
@@ -9,7 +10,7 @@ const options = {
     'Accept': 'application/json',
     'Accept-Charset': 'utf-8',
   },
-  body : {"socialId": "133729814", "message": "message", "messageTypeIndex": 0},
+  body : {"socialId": "", "message": "", "messageTypeIndex": 0},
   json: true 
 };
 
