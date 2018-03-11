@@ -1,7 +1,7 @@
 {
   "dev": {
-    "track":  "T3chFest",
-    "uri":  "http://localhost:3000/api/social"
+    "track":  "IEDblockchain",
+    "uri":  "http://localhost:8080/api/social"
   },
   "pro": {
     "track":  "T3chFest",
